@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analysis</title>
+    <style>
+        #in{
+            color:blue;
+            font-size:40px;
+        }
+        h1{
+            color:skyblue;
+            background-color:black;
+        }
+        #b{
+            font-size:20px;
+            color:Green;
+        }
+        #f{
+            background-color:skyblue;
+        }
+
+        .tick{
+            font-size:20px;
+            
+        }
+        .box{
+            font-size:20px;
+        }
+        .intext{
+            color:yellow;
+            background-color:red;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <br>
+    <h1 align="center">Text Analysis</h1>
+    <hr><br>
+    <form action = "/upper/" method="POST" align="center" id = 'f'>
+        {% csrf_token %}
+
+        <label for ="msg" id = "in">Your Text:</label><br>
+        <textarea id="msg" name="message" style="width: 917px; height: 326px;"></textarea><br>
+
+
+        <label for="u" class="tick">UpperCase:</label>
+        <input type = "checkbox" name="upper" id = "u" class="box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <label for = "l" class="tick">LowerCase:</label>
+        <input type = "checkbox" name="lower" id = "l" class="box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <label for ="punc" class="tick">Remove Symbols:</label>
+        <input type = "checkbox" name = "punc" id = "punc" class="box">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <label for = "n" class="tick">Remove Number</label>
+        <input type="checkbox" name = "number" id="n" class="box"><br><br>
+
+        <label for = "cw" class="tick">Count Words:</label>
+        <input type="checkbox" name = "cw" id="cw" class="box">
+        <label for = "incw" class='intext'>Enter Word To Count:</label>
+        <input type="text" id = "incw" name = "icw"><br><br>
+
+
+
+        <label for = "w" class="tick">Remove Word</label>
+        <input type="checkbox" name = "word" id="w" class="box">
+
+
+        <label for = "i" class='intext'>Enter Word To remove:</label>
+        <input type="text" id = "i" name = "s"><br><br><br>
+        <button type="submit" id = "b" id = 'b'>Analyze</button>
+        <br>
+        <br>
+        <br>
+        
+
+    </form>
+
+
+    
+
+</body>
+</html>
